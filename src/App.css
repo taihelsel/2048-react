@@ -1,11 +1,9 @@
 .App{
     text-align: center;
 }
-.Grid,.Tile{
+.Grid{
     position: relative;
     display: inline-block;
-}
-.Grid{
     margin-top:5vmax;
     height: 40vmax;
     width: 40vmax;
