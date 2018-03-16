@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 /*React Components*/
-import Grid from "./2048/Grid";
+import Tile from "./Tile.js";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        App
-        <Grid />
+        <div className="Grid">
+            Grid
+            <Tile />
+        </div>
       </div>
     );
   }
