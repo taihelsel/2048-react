@@ -6,8 +6,14 @@ import Tile from "./Tile.js";
 /*Scripts*/
 import addControls from "./js/controls.js";
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      test:"working"
+    }
+  }
   componentDidMount = () =>{
-    addControls();
+    addControls(this);
   }
   render() {
     return (
