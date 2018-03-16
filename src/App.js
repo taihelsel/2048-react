@@ -19,8 +19,22 @@ class App extends Component {
     return (
       <div className="App">
         <div className="Grid">
-            Grid
-            <Tile />
+          <Tile className="col-0 row-0 tile" />
+          <Tile className="col-1 row-1 tile" />
+          <Tile className="col-2 row-2 tile" />
+          <Tile className="col-3 row-3 tile" />
+          <Tile className="col-0 row-0 tile" />
+          <Tile className="col-1 row-1 tile" />
+          <Tile className="col-2 row-2 tile" />
+          <Tile className="col-3 row-3 tile" />
+          <Tile className="col-0 row-0 tile" />
+          <Tile className="col-1 row-1 tile" />
+          <Tile className="col-2 row-2 tile" />
+          <Tile className="col-3 row-3 tile" />
+          <Tile className="col-0 row-0 tile" />
+          <Tile className="col-1 row-1 tile" />
+          <Tile className="col-2 row-2 tile" />
+          <Tile className="col-3 row-3 tile" />
         </div>
       </div>
     );

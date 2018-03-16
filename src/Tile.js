@@ -5,12 +5,12 @@ class Tile extends Component {
     constructor(props){
         super(props);
         this.state = {
-            value:"Tile props",
+            value:"",
         }
     }
     render() {
         return (
-        <div className="Tile">
+        <div className={this.props.className}>
             {this.state.value}
         </div>
         );
