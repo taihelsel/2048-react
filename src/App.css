@@ -1,6 +1,12 @@
 .App{
     text-align: center;
 }
+.high-score-lable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 .Grid{
     position: relative;
     display: inline-block;
