@@ -12,7 +12,18 @@ class App extends Component {
     this.state = {
       highscore:0,
       score:0,
-      tiles:[{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0},{value:0}],
+      row:4,
+      col:4,
+      tiles:(()=>{
+        let i = 0;
+        let ceil = 4*4; /*Col x Row*/
+        const x = [];
+        while(i<ceil){
+          x.push({value:0});
+          i++;
+        }
+        return x;
+      })(),
     }
   }
   componentDidMount = () =>{
@@ -29,20 +40,20 @@ class App extends Component {
         <label className="high-score-lable">High Score : {this.state.highscore}</label>
         <div className="Grid">
           <Tile className="col-0 row-0 tile" value={this.state.tiles[0].value}/>
-          <Tile className="col-1 row-1 tile" value={this.state.tiles[1].value}/>
-          <Tile className="col-2 row-2 tile" value={this.state.tiles[2].value}/>
-          <Tile className="col-3 row-3 tile" value={this.state.tiles[3].value}/>
-          <Tile className="col-0 row-0 tile" value={this.state.tiles[4].value}/>
+          <Tile className="col-1 row-0 tile" value={this.state.tiles[1].value}/>
+          <Tile className="col-2 row-0 tile" value={this.state.tiles[2].value}/>
+          <Tile className="col-3 row-0 tile" value={this.state.tiles[3].value}/>
+          <Tile className="col-0 row-1 tile" value={this.state.tiles[4].value}/>
           <Tile className="col-1 row-1 tile" value={this.state.tiles[5].value}/>
-          <Tile className="col-2 row-2 tile" value={this.state.tiles[6].value}/>
-          <Tile className="col-3 row-3 tile" value={this.state.tiles[7].value}/>
-          <Tile className="col-0 row-0 tile" value={this.state.tiles[8].value}/>
-          <Tile className="col-1 row-1 tile" value={this.state.tiles[9].value}/>
+          <Tile className="col-2 row-1 tile" value={this.state.tiles[6].value}/>
+          <Tile className="col-3 row-1 tile" value={this.state.tiles[7].value}/>
+          <Tile className="col-0 row-2 tile" value={this.state.tiles[8].value}/>
+          <Tile className="col-1 row-2 tile" value={this.state.tiles[9].value}/>
           <Tile className="col-2 row-2 tile" value={this.state.tiles[10].value}/>
-          <Tile className="col-3 row-3 tile" value={this.state.tiles[11].value}/>
-          <Tile className="col-0 row-0 tile" value={this.state.tiles[12].value}/>
-          <Tile className="col-1 row-1 tile" value={this.state.tiles[13].value}/>
-          <Tile className="col-2 row-2 tile" value={this.state.tiles[14].value}/>
+          <Tile className="col-3 row-2 tile" value={this.state.tiles[11].value}/>
+          <Tile className="col-0 row-3 tile" value={this.state.tiles[12].value}/>
+          <Tile className="col-1 row-3 tile" value={this.state.tiles[13].value}/>
+          <Tile className="col-2 row-3 tile" value={this.state.tiles[14].value}/>
           <Tile className="col-3 row-3 tile" value={this.state.tiles[15].value}/>
         </div>
       </div>

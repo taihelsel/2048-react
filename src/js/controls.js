@@ -1,5 +1,6 @@
 /*React component scope is passed into addControls function using "base" as a parameter*/
 /*All mentions of "base" will refer to "this" in the react component*/
+import moveTiles from "./tileMove.js";
 const addControls = (base) =>{
     window.onkeyup = function(e) {
         e = e || window.event;
@@ -30,6 +31,7 @@ const leftKey = (base) => {
 }
 const rightKey = (base) => {
     console.log("right key");
+    moveTiles(base,"row");
 }
 
 export default addControls
