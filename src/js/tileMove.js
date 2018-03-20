@@ -1,13 +1,13 @@
 import addTile from "./addTile.js";
-const moveTiles = (base,selector) =>{
+const moveTiles = (base,selector,key=null) =>{
     let tileValues = [];
     for(let i =0;i<base.state[selector];i++){
         let x = document.getElementsByClassName(selector+"-"+i);
-        tileValues.push(combineTiles(x));
+        tileValues.push(combineTiles(x,key));
     }
     updateGrid(base,tileValues,selector);
 }
-const combineTiles = (x) =>{
+const combineTiles = (x,key) =>{
     let activeTiles = [];
     let lastTile = null;
     for(let i = 0;i<x.length;i++){
@@ -24,6 +24,13 @@ const combineTiles = (x) =>{
             activeTiles.unshift(0);
             lastTile++;
         }
+    }
+    if(key === "left"){
+        activeTiles=activeTiles.filter(Number);
+        while(activeTiles.length<x.length){
+            activeTiles.push(0);
+        }
+        console.log(activeTiles);
     }
     return activeTiles;
 }

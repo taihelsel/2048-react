@@ -28,6 +28,7 @@ const downKey = (base) => {
 }
 const leftKey = (base) => {
     console.log("left key");
+    moveTiles(base,"row","left");
 }
 const rightKey = (base) => {
     console.log("right key");
