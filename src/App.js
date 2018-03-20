@@ -16,11 +16,23 @@ class App extends Component {
       col:4,
       tiles:(()=>{
         let i = 0;
-        let ceil = 4*4; /*Col x Row*/
+        let row = 4; //Max rows
+        let col = 4; //Max cols
+        let rowTracker = 0;
+        let colTracker = 0;
+        let ceil = row * col;
         const x = [];
         while(i<ceil){
-          x.push({value:0});
+          if(rowTracker < row && i%row === 0 && i > 0){
+              rowTracker++;
+          }
+          if (colTracker >= col) {
+            /*rest tracker*/
+            colTracker = 0;
+          }
+          x.push({value:0,col:colTracker,row:rowTracker});
           i++;
+          colTracker++;
         }
         return x;
       })(),
