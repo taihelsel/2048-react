@@ -22,6 +22,7 @@ const combineTiles = (x) =>{
             }
         }else{
             activeTiles.unshift(0);
+            lastTile++;
         }
     }
     return activeTiles;
