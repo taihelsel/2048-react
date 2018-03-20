@@ -20,16 +20,16 @@ const addControls = (base) =>{
       }
 }
 const upKey = (base) => {
-    console.log("up key",base.state.test);
+    console.log("up key");
 }
 const downKey = (base) => {
-    console.log("down key",base.state.test);
+    console.log("down key");
 }
 const leftKey = (base) => {
-    console.log("left key",base.state.test);
+    console.log("left key");
 }
 const rightKey = (base) => {
-    console.log("right key",base.state.test);
+    console.log("right key");
 }
 
 export default addControls

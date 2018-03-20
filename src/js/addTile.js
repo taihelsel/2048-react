@@ -1,3 +1,4 @@
+/*All mentions of "base" will refer to "this" in the react component*/
 const random = (min,max) =>{
     return Math.floor(Math.random() * max) + min;
 }
