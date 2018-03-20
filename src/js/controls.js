@@ -22,13 +22,15 @@ const addControls = (base) =>{
 }
 const upKey = (base) => {
     console.log("up key");
+    moveTiles(base,"col","reverse");
 }
 const downKey = (base) => {
     console.log("down key");
+    moveTiles(base,"col");
 }
 const leftKey = (base) => {
     console.log("left key");
-    moveTiles(base,"row","left");
+    moveTiles(base,"row","reverse");
 }
 const rightKey = (base) => {
     console.log("right key");

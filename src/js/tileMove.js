@@ -25,12 +25,11 @@ const combineTiles = (x,key) =>{
             lastTile++;
         }
     }
-    if(key === "left"){
+    if(key === "reverse"){
         activeTiles=activeTiles.filter(Number);
         while(activeTiles.length<x.length){
             activeTiles.push(0);
         }
-        console.log(activeTiles);
     }
     return activeTiles;
 }
