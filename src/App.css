@@ -29,3 +29,9 @@
     color: #766e64;
     float:left;
 }
+.tile-value{
+    top: 30%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
