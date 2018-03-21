@@ -17,7 +17,6 @@ const addTile = (base) => {
             base.setState({
                 tiles:newTiles
             });
-            document.getElementsByClassName("tile")[newTile].textContent = 2;
         }
     }catch(err){
         console.warn("grid is full need to check for loss");

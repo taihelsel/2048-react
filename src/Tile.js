@@ -6,7 +6,7 @@ class Tile extends Component {
         return (
         this.props.value > 0?
         <div className={this.props.className}>
-            {this.props.value}
+            <label>{this.props.value}</label>
         </div>:
         <div className={this.props.className}>
         </div>
