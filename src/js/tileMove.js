@@ -3,17 +3,21 @@ const moveTiles = (base,selector,key=null) =>{
     let tileValues = [];
     for(let i =0;i<base.state[selector];i++){
         let x = document.getElementsByClassName(selector+"-"+i);
-        tileValues.push(combineTiles(x,key));
+        tileValues.push(combineTiles(x,key,base));
     }
     updateGrid(base,tileValues,selector);
 }
-const combineTiles = (x,key) =>{
+const combineTiles = (x,key,base) =>{
     let activeTiles = [];
     let lastTile = null;
     for(let i = 0;i<x.length;i++){
         if(x[i].textContent > 0 && x[i].textContent.length > 0){
             if(x[i].textContent == activeTiles[lastTile]){
                 activeTiles[lastTile] = activeTiles[lastTile] * 2;
+                const newScore = base.state.score +activeTiles[lastTile];
+                base.setState({
+                    score:newScore
+                })
                 activeTiles.unshift(0);
                 lastTile+=2;
             }else{

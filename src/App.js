@@ -50,6 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <label className="high-score-lable">High Score : {this.state.highscore}</label>
+        <label className="score-lable">Score : {this.state.score}</label>
         <div className="Grid">
           <Tile className="col-0 row-0 tile" value={this.state.tiles[0].value}/>
           <Tile className="col-1 row-0 tile" value={this.state.tiles[1].value}/>

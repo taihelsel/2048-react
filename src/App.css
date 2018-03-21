@@ -7,10 +7,16 @@
     left: 0;
     width: 100%;
 }
+.score-lable{
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+}
 .Grid{
     position: relative;
     display: inline-block;
-    margin-top:5vmax;
+    margin-top:10vmax;
     height: 40vmax;
     width: 40vmax;
     text-align: left;
